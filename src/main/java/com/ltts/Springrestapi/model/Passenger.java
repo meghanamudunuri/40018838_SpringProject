@@ -17,10 +17,22 @@ import lombok.ToString;
 @Table(name="passenger_table")
 public class Passenger {
 
+	public Passenger(Long id, Long age, String name, String destination, String arrival, String email) {
+		super();
+		this.id = id;
+		this.age = age;
+		this.name = name;
+		this.destination = destination;
+		this.arrival = arrival;
+		this.email = email;
+	}
 
+	public Passenger() {
+		super();
+	}
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private Long id;
 	
